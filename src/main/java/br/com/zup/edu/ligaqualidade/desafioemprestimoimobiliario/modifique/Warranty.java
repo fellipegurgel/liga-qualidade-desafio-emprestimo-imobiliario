@@ -9,7 +9,7 @@ public class Warranty{
     String province;
     ArrayList notAllowedProvinces = new ArrayList(Arrays.asList("PR", "SC", "RS"));
 
-    public Warranty(String eventId, String eventTimestamp, String id, Double value, String province) {
+    public Warranty(String id, Double value, String province) {
         if (notAllowedProvinces.contains(province))
             throw new IllegalArgumentException("Province not allowed");
         this.id = id;

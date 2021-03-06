@@ -11,7 +11,7 @@ public class Proposal {
     Map<String, Warranty> warranties;
     Map<String, Proponent> proponents;
 
-    public Proposal(String eventId, String eventTimestamp, String id, Double loanValue, Integer numberOfMonthlyInstallments) {
+    public Proposal(String id, Double loanValue, Integer numberOfMonthlyInstallments) {
         if (loanValue < 30000 || loanValue > 3000000)
             throw new IllegalArgumentException("Loan value must be between 30.000 and 3.000.000");
         if (numberOfMonthlyInstallments < 24 || numberOfMonthlyInstallments > 180)
@@ -25,7 +25,7 @@ public class Proposal {
         this.proponents = new HashMap<>();
     }
 
-    public void addProponent(){
+    public void addWarranty(Warranty warranty){
 
     }
 
